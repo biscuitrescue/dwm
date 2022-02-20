@@ -9,13 +9,13 @@ vol(){
 clk(){
 	clk="$(date +"%I:%M %p")"
 	sleep 0
-	echo -e "  $clk"
+	echo -e " $clk"
 }
 
 dte(){
 	dte="$(date +"%d %b, %A")"
 	sleep 0
-	echo -e "  $dte"
+	echo -e " $dte"
 }
 
 mem(){
@@ -27,7 +27,7 @@ mem(){
 backlight(){
 	backlight=`xbacklight -get`
 	sleep 0
-	echo -e "  $backlight%"
+	echo -e " $backlight%"
 }
 
 cpu(){
@@ -38,7 +38,7 @@ cpu(){
 	sleep 0.5
 	total=$((a+b+c+idle))
 	cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
-	echo -e "  $cpu%"
+	echo -e " $cpu%"
 }
 
 bat0(){
@@ -53,7 +53,7 @@ bat0(){
 	read status < /sys/class/power_supply/BAT0/status
 	sleep 0
 	if [ $status = 'Discharging' ]; then
-		status=''	
+		status=''	
 	elif [ $status = 'Charging' ]; then
 		status=''
 	elif [ $status = 'Full' ]; then
@@ -69,6 +69,6 @@ bat0(){
 
 
 while true; do
-	xsetroot -name "|  $(cpu)  |  $(mem)  |  $(backlight)  |  $(clk)  |  $(dte)  |  $(vol)  |  $(bat0)"
+	xsetroot -name "| $(cpu) | $(mem) | $(backlight) | $(clk) | $(dte) | $(vol) | $(bat0)"
 	sleep 0
 done

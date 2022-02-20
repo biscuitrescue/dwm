@@ -1,17 +1,17 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 32;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = {
+"space mono for powerline:weight=bold:size=12:antialias=true:hinting=true",
 "FontAwesome:size=13:antialias=true:hinting=true",
-"terminessttf nerd font mono:weight=bold:size=13:antialias=true:hinting=true",
 };
-static const char col_gray1[]       = "#1b1c26";
+static const char col_gray1[]       = "#282c34";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#000000";
@@ -22,7 +22,7 @@ static const char col3[]            = "#ffffff";
 static const char col4[]            = "#ffffff";
 static const char col5[]            = "#ffffff";
 static const char col6[]            = "#ffffff";
-static const char col_cyan[]        = "#b79feb";
+static const char col_cyan[]        = "#aaeedd";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 
@@ -59,7 +59,7 @@ static const char *const autostart[] = {
 
 /* tagging */
 /* static const char *tags[] = { "WWW", "WEB", "TERM", "TXT", "VIDS", "FILES", "SYS", "MUS", "VC", "VIRT" }; */
-static const char *tags[] = { "  ", "  ", "   ", "  ", "", "  ", "  ", "", "  ", "  " };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "", "" };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 static const int momentaryalttags = 0; /* 1 means alttags will show only when key is held down*/
 
@@ -70,7 +70,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "firefox",  NULL,       NULL,       1<<1,       0,           -1 },
 	{ "Vivaldi-stable",  NULL, 	  NULL,   	  2, 			0, 			 -1 },
 	/* { "kitty", 	  NULL, 	  NULL, 	  1 << 2, 			0, 			 -1 }, */
 	{ "Pavucontrol", 	  NULL, 	  NULL, 	  1 << 7, 			0, 			 -1 },
