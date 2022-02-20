@@ -63,7 +63,7 @@ bat0(){
 		sleep 60
 		break
 	fi
-	bat0="$bap  $status"
+	bat0="$status $bap"
 	echo -e "$bat0"
 }
 
