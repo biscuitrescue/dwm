@@ -39,7 +39,7 @@ static const char *colors[][3]      = {
 	[SchemeCol5]  = { col5,      col_gray1, col_gray2 },
 	[SchemeCol6]  = { col6,      col_gray1, col_gray2 },
 	[SchemeSel]   = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeTitle] = { col1,      col_gray1,  col_cyan  },
+	[SchemeTitle] = { col_gray4,      col_cyan,  col_cyan  },
 };
 
 static const unsigned int alphas[][3]      = {
