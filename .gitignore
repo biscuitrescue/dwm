@@ -1,5 +1,5 @@
 *.rej
 *.diff
-*.origa
+*.orig
 dwm
 config.h
