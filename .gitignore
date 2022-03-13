@@ -1,0 +1,5 @@
+*.rej
+*.diff
+*.origa
+dwm
+config.h

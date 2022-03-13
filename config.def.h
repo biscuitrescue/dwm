@@ -6,7 +6,7 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 32;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = {
 "space mono for powerline:weight=bold:size=12:antialias=true:hinting=true",
 "FontAwesome:size=13:antialias=true:hinting=true",
@@ -70,10 +70,11 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "firefox",  NULL,       NULL,       1<<1,       0,           -1 },
+	{ "firefox",  NULL,       NULL,       1<<4,       0,           -1 },
+	{ "Brave-browser",  NULL,       NULL,       1<<1,       0,           -1 },
 	{ "Vivaldi-stable",  NULL, 	  NULL,   	  2, 			0, 			 -1 },
 	/* { "kitty", 	  NULL, 	  NULL, 	  1 << 2, 			0, 			 -1 }, */
-	{ "Pavucontrol", 	  NULL, 	  NULL, 	  1 << 7, 			0, 			 -1 },
+	{ "Pavucontrol", 	  NULL, 	  NULL, 	  1 << 6, 			0, 			 -1 },
 	{ "discord", 	  NULL, 	  NULL, 	  1 << 3, 			0, 			 -1 },
 };
 
@@ -104,7 +105,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-c", "-p", "RUN:", "-l", "15", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-h", "25", "-p", "RUN:", "-i", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
