@@ -8,10 +8,10 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = {
-"spacemono nerd font:weight=bold:size=12:antialias=true:hinting=true",
+"m plus 1 code:weight=bold:size=10:antialias=true:hinting=true",
 "FontAwesome:size=13:antialias=true:hinting=true",
 };
-static const char col_gray1[]       = "#282c34";
+static const char col_gray1[]       = "#1e1e2e";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#000000";
@@ -22,7 +22,7 @@ static const char col3[]            = "#ffffff";
 static const char col4[]            = "#ffffff";
 static const char col5[]            = "#ffffff";
 static const char col6[]            = "#ffffff";
-static const char col_cyan[]        = "#f28fad";
+static const char col_cyan[]        = "#f38baf";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 
@@ -105,8 +105,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-h", "25", "-p", "RUN:", "-i", NULL };
-static const char *termcmd[]  = { "alacritty", "-o", "font.size=10", NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
